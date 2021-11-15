@@ -1,12 +1,14 @@
 from django.db import models
 from apps.decks.models import Deck
 
+from apps.utils.models import TimeStamps
+
 
 class Buckets(models.Model):
     label = models.TextField(max_length=128)
 
 
-class Card(models.Model):
+class Card(TimeStamps):
     buckets = (
         (1, '1 Day'),
         (2, '3 Day'),

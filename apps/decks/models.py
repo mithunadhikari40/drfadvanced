@@ -1,9 +1,9 @@
 from django.db import models
 
+from apps.utils.models import TimeStamps
 
-# Create your models here
 
-class Deck(models.Model):
+class Deck(TimeStamps):
     title = models.CharField(max_length=128)
     description = models.TextField()
     last_reviewed_date = models.DateTimeField(null=True, blank=True)

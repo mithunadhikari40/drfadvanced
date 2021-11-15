@@ -9,7 +9,9 @@ class CardAdmin(admin.ModelAdmin):
         "answer",
         "bucket",
         "next_review_date",
-        "last_reviewed_date"
+        "last_reviewed_date",
+        "created_at",
+        "updated_at",
     ]
 
 

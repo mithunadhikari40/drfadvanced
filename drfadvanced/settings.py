@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework_nested',
     'apps.users.apps.UsersConfig',
     'apps.decks.apps.DecksConfig',
+    'apps.utils.apps.UtilsConfig',
     'apps.cards.apps.CardsConfig',
 ]
 

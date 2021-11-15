@@ -11,4 +11,4 @@ class DecksSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Deck
-        fields = ['id', 'title', 'description']
+        fields = ['id', 'title', 'description', 'created_at', 'updated_at']

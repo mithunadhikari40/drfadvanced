@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Card
 from apps.decks.models import Deck
 
+
 class CardsSerializer(serializers.ModelSerializer):
     # buckets = (
     #     (1, '1 Day'),
@@ -24,5 +25,5 @@ class CardsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Card
-        fields = ['id', 'deck', 'question', 'answer']
+        fields = ['id', 'deck', 'question', 'answer', 'created_at', 'updated_at']
         # fields = ['id', 'deck', 'question', 'answer', 'bucket', 'next_review_date', 'last_reviewed_date']
