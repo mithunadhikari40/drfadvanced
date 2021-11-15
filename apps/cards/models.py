@@ -20,8 +20,11 @@ class Card(models.Model):
     question = models.TextField(max_length=128)
     answer = models.TextField(max_length=1000)
     """Buckets is now a foreign key to another table, but we could give it a choice very easily"""
-    # bucket = models.IntegerField(choices=buckets)
+    bucket = models.IntegerField(choices=buckets, default=1)
     # bucket = models.ForeignKey("Buckets", on_delete=models.CASCADE)
-    bucket = models.ForeignKey(Buckets, on_delete=models.CASCADE, default= 1)
-    nextReviewDate = models.DateTimeField()
-    lastReviewedDate = models.DateTimeField()
+    # bucket = models.ForeignKey(Buckets, on_delete=models.CASCADE, default=1)
+    next_review_date = models.DateTimeField(auto_now_add=True)
+    last_reviewed_date = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"Question: {self.question}, Answer: {self.answer}"
